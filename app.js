@@ -213,7 +213,7 @@ function renderTasks() {
       titleWrap.removeChild(metaEl);
       titleWrap.appendChild(titleInputEdit);
       titleWrap.appendChild(dateInputEdit);
-      actions.innerHTML = '';
+      while (actions.firstChild) {actions.removeChild(actions.firstChild);}
       while (actions.firstChild) actions.removeChild(actions.firstChild);
       actions.appendChild(saveBtn);
       actions.appendChild(cancelBtn);
